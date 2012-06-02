@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Blackjack</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/blackjack.css">
+  </head> 
+
+  <body>
+    
+    <div id="game" class="container">
+      
+      <!-- User Controls -->
+      <div class="row-fluid">
+       
+        <div class="span5 well">
+          <a id="deal" class="btn btn-large span1">Deal</a>
+          <a id="hit" class="btn btn-success btn-large span1 pull-right disabled">Hit</a>
+          <a id="stand" class="btn btn-danger btn-large span1 pull-right disabled">Stand</a>
+        </div>
+         <div class="span5 alert-block" id="alerts"></div>
+      </div>
+
+      <div class="row-fluid">
+
+        <!-- Dealer View -->
+        <div class="dealer span5 well">
+          <label>Dealer</label>
+          <div class="hand-area"></div>
+        </div>
+        
+        <!-- User View -->
+        <div class="user span5 well">
+          <label>You</label>
+          <div class="hand-area"></div>
+        </div>
+
+      </div>
+
+      <!-- ICanHaz Card Template -->
+      <script id="card" type="text/html">
+        <span class="suit">
+          {{suitView}}
+        </span>
+        <span class="rank">
+          {{rankView}}
+        </span>
+      </script>
+
+      <script src="js/lib/jquery-1.7.min.js"></script>
+      <script src="js/lib/icanhaz.min.js"></script>
+      <script src="js/lib/underscore-min.js"></script>
+      <script src="js/lib/backbone-min.js"></script>
+      <script src="js/lib/bootstrap.min.js"></script>
+      <script src="js/blackjack.js"></script>
+
+    </div>
+  </body>
+</html>
